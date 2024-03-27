@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script","Tangerine", serif;
+  background-color: grey; 
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+}
+
+.header {
+  position: relative;
+  height: 300px;
+  background-color: grey;
+  overflow: hidden;
+}
+
+.dlogo {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.saved-blogs h2 {
+  font-family: "Dancing Script","Tangerine", serif;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  color: beige;
+}
+
+#toggleBtn {
+  position: absolute;
+  top: 15%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: beige; /* beige background for toggle button */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.homepage {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: beige; 
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.main {
+  padding: 25px;
+  color: red;
+}
+
+.blog-list {
+  margin-top: 25px;
+  }
+
+.blog-post {
+  border: 1px solid black; 
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: beige;
+  border-radius: 20px; 
+  box-shadow: 0 2px 4px pink(110, 2, 2, 0.4); 
+}
+
+.blog-post h3 {
+  margin-bottom: 15px; 
+  font-size: 30px; 
+  color: red; 
+}
+
+.blog-post p {
+  margin: 10px 0; 
+  font-size: 20px;
+  color: red; 
+}
+
+.light-mode body {
+  background-color: lightcyan;
+}
+
+.light-mode .header {
+  background-color: lightcyan;
+}
+
+.light-mode .saved-blogs h2 {
+  color: red; /
+}
+
+.light-mode #toggleBtn,
+.light-mode .homepage {
+  background: pink; 
+  color: black; 
+}
+
+.light-mode .blog-post {
+  border: 1px solid #000; 
+  background-color: pink; 
+  box-shadow: 0 2px 4px lightcyan (0, 0, 0, 0.4); 
+}
+
+.light-mode .blog-post h3 {
+  color: red; 
+}
+
+.light-mode .blog-post p {
+  color: lightcyan; 
+}
+
+.light-mode .body {
+  background-color: lightcyan; 
+  }

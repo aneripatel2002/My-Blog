@@ -1,0 +1,227 @@
+/* Default background is light mode */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script","Tangerine", serif;
+  background-color: grey; 
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+}
+
+.header {
+  position: relative;
+  height: 300px;
+  background-color: grey;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.introduction {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  color: beige;
+}
+
+#toggleBtn {
+  position: absolute;
+  top: 15%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: beige; /* beige background for toggle button */
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+}
+
+.toggle-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d0eaf3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(224, 244, 176);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.blogs {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.blogs {
+  background: beige;
+}
+
+#submitBtn {
+  display: block; 
+  margin: 10px auto 0; 
+  padding: 10px 20px;
+  background: beige;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: fit-content; 
+}
+
+.blogs:hover,
+#submitBtn:hover,
+#toggleBtn:hover {
+  background: #9ddef0;
+}
+
+.body-section {
+  margin-top: 50px;
+}
+
+#username,
+#blogTitle,
+#blogContent {
+  display: block;
+  width: 56%;
+  padding: 10px;
+  margin: 10px auto;
+  border: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(164, 239, 199, 0.696);
+  border-radius: 25px;
+  box-shadow: 0 2px 4px white (110, 2, 2, 0.4); 
+}
+
+#blogContent {
+  height: 200px;
+}
+
+/* Light mode styles */
+.light-mode .body-section {
+  background-color: lightcyan; 
+  }
+
+.light-mode .header {
+  background-color: lightcyan; 
+}
+
+.light-mode .introduction {
+  color: red; 
+  }; 
+
+.light-mode #username,
+.light-mode #blogTitle,
+.light-mode #blogContent {
+  background-color: #fff; 
+  font-family: "Dancing Script","Tangerine", serif;
+  color: #000; 
+  border-color: #000; 
+}
+
+.light-mode #submitBtn {
+  background: pink; 
+  color: #fff; 
+}
+
+.light-mode #submitBtn:hover,
+.light-mode .blogs:hover {
+  background: #f3d6ee; 
+}
+
+.light-mode #toggleBtn {
+  background: pink; 
+  color: black; 
+}
+
+.light-mode .blogs {
+  background: #000; 
+  color: #fff; 
+}
+
+.light-mode .blog-form input,
+.light-mode .blog-form textarea {
+  background-color: #fff; 
+  color: #000; 
+  border-color: #000; 
+}
+
+.light-mode #submitBtn {
+  background: pink; 
+  color: black; 
+}
+
+.light-mode #submitBtn:hover,
+.light-mode .blogs:hover {
+  background: #333; 
+}
