@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="Assets/CSS/Style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aneri Blog</title>
+</head>
+<body>
+    <header class="header">
+        <img src="Assets/images/Alogo.jpg" alt="Logo" class="logo" style="width: 200px; height: 200px;">
+        <section class="introduction">
+            <h1>Welcome to My Blog</h1>
+            <p>Please feel free to share your Thoughts.</p>
+        </section>
+        <button id="toggleBtn">Light Mode</button>
+        <a href="blog.html" class="blogs">View Blogs</a> 
+    </header>
+    <main class="main">
+        <section class="body-section">
+            <form id="blogForm" class="blog-form">
+                <input type="text" id="username" placeholder="Username">
+                <input type="text" id="blogTitle" placeholder="Blog Title">
+                <textarea id="blogContent" placeholder="Your Blog Content"></textarea>
+                <button type="button" id="submitBtn">Submit</button> 
+            </form>
+        </section>
+    </main>
+    <script src="Assets/js/logic.js"></script>
+</body>
+</html>
