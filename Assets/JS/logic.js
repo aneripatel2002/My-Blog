@@ -5,31 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.addEventListener('click', function(event) {
             event.preventDefault();
         
-            // Get form values
             const username = document.getElementById('username').value;
             const blogTitle = document.getElementById('blogTitle').value;
             const blogContent = document.getElementById('blogContent').value;
         
-            // Check if any of the fields are empty
             if (!username || !blogTitle || !blogContent) {
-                alert('Please complete all fields.'); // Display an alert message if any field is empty
-                return; // Exit the function
+                alert('Please complete all fields.'); 
+                return; 
             }
-        
-            // Create data object
+                    
             const data = {
                 username: username,
                 title: blogTitle,
                 content: blogContent
             };
         
-            // Retrieve existing blogs from localStorage or initialize an empty array
+            // Retrieve existing blogs from local Storage 
             const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
             
             // Add the new blog to the array
             blogs.unshift(data);
             
-            // Store the updated array back in localStorage
+            // Store the updated array back in local Storage
             localStorage.setItem('blogs', JSON.stringify(blogs));
         
             // Redirect to blog.html
