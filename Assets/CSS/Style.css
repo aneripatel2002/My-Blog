@@ -2,8 +2,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Dancing Script","Tangerine", serif;
-  background-color: grey; 
+  font-family: "Dancing Script", "Tangerine", serif;
+  background-color: grey;
   background-size: cover;
   background-position: center;
   color: #000000;
@@ -57,7 +57,7 @@ body {
   height: 40px;
 }
 
-.toggle-switch input { 
+.toggle-switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -71,8 +71,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: #d0eaf3;
-  -webkit-transition: .4s;
-  transition: .4s;
+  transition: .4s; /* Removed -webkit-transition for better compatibility */
 }
 
 .slider:before {
@@ -83,8 +82,7 @@ body {
   left: 4px;
   bottom: 4px;
   background-color: rgb(224, 244, 176);
-  -webkit-transition: .4s;
-  transition: .4s;
+  transition: .4s; /* Removed -webkit-transition for better compatibility */
 }
 
 input:checked + .slider {
@@ -96,8 +94,6 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
@@ -120,26 +116,10 @@ input:checked + .slider:before {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-}
-
-.blogs {
-  background: beige;
-}
-
-#submitBtn {
-  display: block; 
-  margin: 10px auto 0; 
-  padding: 10px 20px;
-  background: beige;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  width: fit-content; 
+  background: beige; /* Moved background color to the end */
 }
 
 .blogs:hover,
-#submitBtn:hover,
 #toggleBtn:hover {
   background: #9ddef0;
 }
@@ -153,14 +133,12 @@ input:checked + .slider:before {
 #blogContent {
   display: block;
   width: 56%;
-  padding: 10px;
-  margin: 10px auto;
+  padding: 20px; /* Combined padding values for readability */
+  margin: 10px auto 20px; /* Adjusted margin for consistency */
   border: none;
-  padding: 20px;
-  margin-bottom: 20px;
   background-color: rgba(164, 239, 199, 0.696);
   border-radius: 25px;
-  box-shadow: 0 2px 4px white (110, 2, 2, 0.4); 
+  box-shadow: 0 2px 4px rgba(110, 2, 2, 0.4); /* Corrected box-shadow syntax */
 }
 
 #blogContent {
@@ -168,60 +146,55 @@ input:checked + .slider:before {
 }
 
 /* Light mode styles */
-.light-mode .body-section {
-  background-color: lightcyan; 
-  }
+.light-mode {
+  background-color: lightcyan;
+}
 
-.light-mode .header {
-  background-color: lightcyan; 
+.light-mode .header,
+.light-mode .body-section {
+  background-color: lightcyan; /* Combined background-color for consistency */
+}
+
+/* Light mode styles */
+.light-mode body {
+  background-color: lightcyan;
+  height: 100vh; /* Set height to full viewport height */
+  margin: 0; /* Remove default body margin */
 }
 
 .light-mode .introduction {
-  color: red; 
-  }; 
+  color: red; /* Changed color to red for contrast */
+}
 
 .light-mode #username,
 .light-mode #blogTitle,
-.light-mode #blogContent {
-  background-color: #fff; 
-  font-family: "Dancing Script","Tangerine", serif;
-  color: #000; 
-  border-color: #000; 
+.light-mode #blogContent,
+.light-mode #submitBtn,
+.light-mode .blogs {
+  background-color: #fff; /* Changed background to white for readability */
+  color: #000; /* Changed text color to black for contrast */
+  border-color: #000; /* Changed border color to black for visibility */
 }
 
-.light-mode #submitBtn {
-  background: pink; 
-  color: #fff; 
-}
-
-.light-mode #submitBtn:hover,
+.light-mode #submitBtn,
 .light-mode .blogs:hover {
-  background: #f3d6ee; 
+  background: pink; /* Changed background color to pink for emphasis */
+  color: #fff; /* Changed text color to white for contrast */
 }
 
 .light-mode #toggleBtn {
-  background: pink; 
-  color: black; 
+  background: pink; /* Changed background color to pink for emphasis */
+  color: black; /* Changed text color to black for contrast */
 }
 
-.light-mode .blogs {
-  background: #000; 
-  color: #fff; 
-}
-
-.light-mode .blog-form input,
-.light-mode .blog-form textarea {
-  background-color: #fff; 
-  color: #000; 
-  border-color: #000; 
-}
-
-.light-mode #submitBtn {
-  background: pink; 
-  color: black; 
-}
-
-.light-mode #submitBtn:hover,
-.light-mode .blogs:hover {
-  background: #333; 
+#submitBtn {
+  display: block;
+  margin: 10px auto 0; /* Auto margin for horizontal centering */
+  padding: 10px 20px;
+  background: beige;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: fit-content;
 }
